@@ -22,6 +22,10 @@
     align-items: center;
 }
 
+img{
+    cursor: pointer;
+}
+
 /* Menu CSS */
 nav{
     box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
@@ -29,6 +33,7 @@ nav{
     position: fixed;
     width: 100%;
     font-weight: bold;
+    z-index: 1;
 }
 
 .left{
@@ -38,7 +43,6 @@ nav{
 .left img{
     width: 53px;
     margin-left: 7.3%;
-    cursor: pointer;
 }
 
 nav ul li{
@@ -141,32 +145,27 @@ nav ul sup{
 /* User box */
 
 /* Hovers & Effects */
-ul li:nth-child(1):hover{
+nav ul li:nth-child(1):hover{
     border-bottom: 4px solid #ee5f73;
-    cursor: pointer;
 }
 
-ul li:nth-child(2):hover{
+nav ul li:nth-child(2):hover{
     border-bottom: 4px solid #FB56C1;
-    cursor: pointer;
 }
 
-ul li:nth-child(3):hover{
+nav ul li:nth-child(3):hover{
     border-bottom: 4px solid #F26A10;
-    cursor: pointer;
 }
 
-ul li:nth-child(4):hover{
+nav ul li:nth-child(4):hover{
     border-bottom: 4px solid #F2C210;
-    cursor: pointer;
 }
 
-ul li:nth-child(5):hover{
+nav ul li:nth-child(5):hover{
     border-bottom: 4px solid #0DB7AF;
-    cursor: pointer;
 }
 
-ul li:nth-child(6):hover{
+nav ul li:nth-child(6):hover{
     border-bottom: 4px solid #FF3F6C;
     cursor: pointer;
 }
