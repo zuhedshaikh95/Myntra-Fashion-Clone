@@ -41,7 +41,7 @@ nav{
     cursor: pointer;
 }
 
-ul li{
+nav ul li{
     list-style-type: none;
     display: inline-block;
     padding-left: 15px;
@@ -49,13 +49,13 @@ ul li{
     border-bottom: 4px solid transparent;
 }
 
-ul{
+nav ul{
     padding-left: 2%;
     position: relative;
     line-height: 80px;
 }
 
-ul li a{
+nav ul li a{
     text-align: center;
     text-decoration: none;
     font-size: 14px;
@@ -65,7 +65,7 @@ ul li a{
     text-transform: uppercase;
 }
 
-ul sup{
+nav ul sup{
     color: var(--pink);
     top: -0.4rem;
     left: 0.2rem;
