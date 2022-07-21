@@ -1,0 +1,171 @@
+.container{
+    width: 100%;
+    padding-top: 120px;
+    z-index: -1;
+}
+
+.top img{
+    margin-top: 40px;
+    width: 100%;
+}
+
+h4{
+    text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    margin: 50px 0 50px 30px;
+}
+
+.img100 img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.grid{
+    display: grid;
+}
+
+.deal-of-day{
+    grid-template-columns: repeat(10,1fr);
+}
+
+.exclusive-brands, .best-buys{
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(2,auto);
+    gap: 0 5px;
+}
+
+.top-picks{
+    grid-template-columns: repeat(7,1fr);
+    gap: 0 3px;
+}
+
+.categories, .deals-top-brands{
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(3,auto);
+}
+
+.slashed-prices{
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(2,auto);
+    gap: 5px 0;
+}
+
+.luxury-brands{
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(2,auto);
+    gap: 2px 0;
+}
+
+footer .footer-flex{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding: 30px 0;
+    width: 80%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.footer-flex .box p{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 20px 40px 10px 0;
+}
+
+.box ul li{
+    list-style-type: none;
+    padding: 2px 0;
+    color: #696b79;
+}
+
+.img-box{
+    display: flex;
+}
+
+.img-box img{
+    margin-right: 10px;
+    width: 140px;
+}
+
+.social-box img{
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.returns{
+    margin-left: 30px;
+}
+
+.returns div > p{
+    font-weight: 600;
+}
+
+.returns > div{
+    display: flex;
+    width: 60%;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.returns div > p > span{
+    color: #696b79;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+.returns img{
+    width: 55px;
+    height: 48px;
+}
+
+.office h5{
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.office{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #696b79;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.office span{
+    color: #526cd0;
+    font-weight: 600;
+}
+
+.end{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: #696b79;
+    font-size: 16px;
+    width: 80%;
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.end span{
+    color: #526cd0;
+    font-weight: 600;
+}
+
+.fade{
+  animation-name: fade-image;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade-image{
+  from {opacity: .4} 
+  to {opacity: 1}
+}
