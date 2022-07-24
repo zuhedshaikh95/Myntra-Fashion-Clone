@@ -1,0 +1,67 @@
+.container{
+    width: 100%;
+    padding-top: 120px;
+    z-index: -1;
+}
+
+.top img{
+    margin-top: 40px;
+    width: 100%;
+}
+
+h4{
+    text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    margin: 50px 0 50px 30px;
+}
+
+.img100 img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.grid{
+    display: grid;
+}
+.budget-buys{
+    grid-template-columns: repeat(6,1fr);
+}
+
+.brands{
+    grid-template-columns: repeat(9,1fr);
+}
+
+.top-picks{
+    grid-template-columns: repeat(11,1fr);
+}
+
+.iconic-brands{
+    grid-template-columns: repeat(5,1fr);
+}
+
+.essentials{
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,auto);
+}
+
+.explore{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,auto);
+}
+
+.explore img{
+    width: 50%;
+}
+
+
+.fade{
+    animation-name: fade-image;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade-image{
+    from {opacity: .4} 
+    to {opacity: 1}
+  }

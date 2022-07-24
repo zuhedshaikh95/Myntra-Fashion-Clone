@@ -1,0 +1,181 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://logosarchive.com/wp-content/uploads/2021/12/Myntra-icon-logo.svg">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/mens.css">
+    <script src="https://kit.fontawesome.com/4cf7896eb5.js" crossorigin="anonymous"></script>
+    <title>Mens - Buy Apparel Online in India</title>
+</head>
+<body>
+<!-- Navbar -->
+<header>
+    <nav class="flex">
+        <div class="left flex">
+            <a href="index.html">
+                <img src="https://logosarchive.com/wp-content/uploads/2021/12/Myntra-icon-logo.svg" alt="logo">
+            </a>
+            <ul>
+                <li><a href="mens.html">Men</a></li>
+                <li><a href="womens.html">Women</a></li>
+                <li><a href="kids.html">Kids</a></li>
+                <li><a href="#">Home & Living</a></li>
+                <li><a href="#">Beauty</a></li>
+                <li><a href="#">Studio<sup>New</sup></a></li>
+            </ul>
+        </div>
+        <div class="query flex">
+            <img src="https://cdn-icons-png.flaticon.com/512/107/107122.png" alt="Search">
+            <input type="text" placeholder="Search for products, brands and more">
+        </div>
+        <div class="action flex">
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/128/126/126486.png" alt="profile">
+                <p>Profile</p>
+            </div>
+            <div>
+                <a href="wishlist.html">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="wishlist">
+                </a>
+                <p>Wishlist</p>
+            </div>
+            <div>
+                <a href="cart.html">
+                    <img src="https://cdn-icons-png.flaticon.com/128/126/126515.png" alt="bag"> <sup id="bag-count">0</sup>
+                </a>
+                <p>Bag</p>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Navbar -->
+
+<!-- Main -->
+<main>
+<div class="count">
+    <p>Apparel - <span id="count"></span> items</p>
+    <select id="filter">
+        <option value="">Sort by</option>
+        <option value="htl">High to Low</option>
+        <option value="lth">Low to High</option>
+    </select>
+</div>
+<section>
+    
+    <div class="filter-cont">
+        <div class="top">
+            <p>filter</p>
+            <span id="clear">Clear All</span>
+        </div>
+        <div class="categories">
+            <p>categories</p>
+            <div>
+                <input type="checkbox" id="t-shirts">
+                <label for="t-shirts">Tshirts</label>
+            </div>
+            <div>
+                <input type="checkbox" id="shirts">
+                <label for="shirts">Shirts</label>
+            </div>
+            <div>
+                <input type="checkbox" id="trousers">
+                <label for="trousers">Trousers</label>
+            </div>
+            <div>
+                <input type="checkbox" id="jackets">
+                <label for="jackets">Jackets</label>
+            </div>
+        </div>
+        <div class="brands">
+            <p>Brands</p>
+            <div>
+                <input type="checkbox" id="roadster">
+                <label for="roadster">Roadster</label>
+            </div>
+            <div>
+                <input type="checkbox" id="allen">
+                <label for="allen">Allen Solly</label>
+            </div>
+            <div>
+                <input type="checkbox" id="louis">
+                <label for="louis">Loius Phillipe</label>
+            </div>
+            <div>
+                <input type="checkbox" id="wrogn">
+                <label for="wrogn">WROGN</label>
+            </div>
+        </div>
+        <div class="price">
+            <p>Price</p>
+            <div>
+                <input type="checkbox" id="p1">
+                <label for="p1">Rs. 500 to Rs. 1000</label>
+            </div>
+            <div>
+                <input type="checkbox" id="p2">
+                <label for="p2">Rs. 1000 to Rs. 1500</label>
+            </div>
+            <div>
+                <input type="checkbox" id="p3">
+                <label for="p3">Rs. 1500 to Rs. 2000</label>
+            </div>
+            <div>
+                <input type="checkbox" id="p4">
+                <label for="p4">Rs. 2000 to Rs. 3000</label>
+            </div>
+        </div>
+        <div class="color">
+            <p>Color</p>
+            <div>
+                <input type="checkbox" id="blue">
+                <span id="b"></span>
+                <label for="blue">Blue</label>
+            </div>
+            <div>
+                <input type="checkbox" id="red">
+                <span id="r"></span>
+                <label for="red">Red</label>
+            </div>
+            <div>
+                <input type="checkbox" id="yellow">
+                <span id="y"></span>
+                <label for="yellow">Yellow</label>
+            </div>
+            <div>
+                <input type="checkbox" id="olive">
+                <span id="o"></span>
+                <label for="olive">Olive</label>
+            </div>
+        </div>
+        <div class="discount">
+            <p>Discount Range</p>
+            <div>
+                <input type="checkbox" id="disc30">
+                <label for="disc30">30% and above</label>
+            </div>
+            <div>
+                <input type="checkbox" id="disc40">
+                <label for="disc40">40% and above</label>
+            </div>
+            <div>
+                <input type="checkbox" id="disc50">
+                <label for="disc50">50% and above</label>
+            </div>
+            <div>
+                <input type="checkbox" id="disc60">
+                <label for="disc60">60% and above</label>
+            </div>
+        </div>
+    </div>
+    <div class="display-cont">
+
+    </div>
+</section>
+</main>
+<!-- Main -->
+</body>
+</html>
+<script src="./Script/mensData.js"></script>
+<script src="./Script/viewData.js"></script>
