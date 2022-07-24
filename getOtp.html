@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments Authentication</title>
+    <style type="text/css">
+        h2{
+            margin-top: 4rem;
+            text-align: center;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input{
+            padding: 8px;
+            border-radius: 6px;
+            margin: 0 10px;
+            border: 1.5px solid #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Enter OTP</h2>
+    <form action="">
+        <input type="tel" maxlength="4" placeholder="Enter OTP  (1234)">
+        <input type="submit">        
+    </form>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",()=>{
+        event.preventDefault();
+        let bagArr = JSON.parse(localStorage.getItem("bag"));
+        let otp = document.querySelector("input[type='tel']").value;
+
+        if(otp.length == 4 && otp == 1234){
+            alert("payment successful");
+            bagArr=[];
+            localStorage.setItem("bag",JSON.stringify(bagArr));
+            window.location.href="thankyou.html"
+        }
+        else{
+            alert('enter 4 digit OTP')
+        }
+        document.querySelector("input[type='tel']").value="";
+    })
+</script>

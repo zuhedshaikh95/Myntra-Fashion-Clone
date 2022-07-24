@@ -1,6 +1,6 @@
 # prompt-wilderness-693
-Unit 2 CW Project (Myntra Clone)
-# Tech Stack
-  .HTML5
-  .CSS3
-  .JavaScript ES13
+A set out to clone an e-commerce Indian fashion retail webite: Myntra Fashion
+# Tech stack
+    .HTML5
+    .CSS3
+    .JavaScript ES13

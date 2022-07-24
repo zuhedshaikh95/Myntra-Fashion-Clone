@@ -1,0 +1,175 @@
+section{
+    padding-top: 160px;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,auto);
+    gap: 10px;
+}
+
+.img-grid img{
+    width: 362px;
+    height: 462px;
+}
+
+.details{
+    width: 40%;
+    text-align: left;
+    font-weight: 600;
+    padding: 0 20px 20px 20px;
+}
+
+.head h1{
+    color: #282c3f;
+    padding: 0 20px 0 0;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.head p{
+    color: #535665;
+    padding: 5px 20px 14px 0;
+    font-size: 20px;
+    opacity: .8;
+    font-weight: 400;
+}
+
+s, strong, .mid p{
+    display: inline;
+    padding: 0 10px;
+}
+.mid{
+    margin: 20px 0;
+}
+.mid strong{
+    color: #282c3f;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.mid s{
+    color: #696e79;
+    font-size: 20px;
+    margin-top: 14px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.mid p{
+    font-size: 20px;
+    letter-spacing: .5px;
+    color: #ff905a;
+}
+
+.tax{
+    color: #03a685;
+    font-size: 14px;
+    display: block;
+    margin: 5px 10px 0 10px;
+
+}
+
+.size {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+.size h4{
+    padding: 0 10px;
+}
+
+.size p{
+    font-size: 14px;
+    color: #FF527B;
+}
+
+.sizes{
+    display: flex;
+}
+
+.sizes div{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.sizes :hover{
+    cursor: pointer;
+    border: 1px solid #FF527B;
+}
+
+.btn{
+    padding: 20px;
+}
+
+.btn button:first-child{
+    cursor: pointer;
+    background-color: #ff3e6c;
+    border: 1px solid #ff3e6c;
+    color: #fff;
+    padding: 15px 60px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn button:last-child{
+    cursor: pointer;
+    border: 1px solid #ccc;
+    color: #000;
+    background: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+i{
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.seller{
+    margin: 20px 10px;
+}
+
+.seller p{
+    font-weight: 500;
+    color: gray;
+}
+
+.seller span{
+    font-weight: 600;
+}
+
+#code{
+    color: #000;
+}
+
+#seller{
+    color: #ff3e6c;
+    font-size: 17px;
+}
+
+#clear{
+    padding-left: 30px;
+    color: #ff3e6c;
+    font-size: 13px;
+    cursor: pointer;
+}
