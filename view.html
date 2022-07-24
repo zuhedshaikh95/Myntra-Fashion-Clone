@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://logosarchive.com/wp-content/uploads/2021/12/Myntra-icon-logo.svg">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <link rel="stylesheet" href="./CSS/view.css">
+    <script src="https://kit.fontawesome.com/4cf7896eb5.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+<!-- Header -->
+<header>
+    <nav class="flex">
+        <div class="left flex">
+            <a href="index.html">
+                <img src="https://logosarchive.com/wp-content/uploads/2021/12/Myntra-icon-logo.svg" alt="logo">
+            </a>
+            <ul>
+                <li><a href="mens.html">Men</a></li>
+                <li><a href="womens.html">Women</a></li>
+                <li><a href="kids.html">Kids</a></li>
+                <li><a href="#">Home & Living</a></li>
+                <li><a href="#">Beauty</a></li>
+                <li><a href="#">Studio<sup>New</sup></a></li>
+            </ul>
+        </div>
+        <div class="query flex">
+            <img src="https://cdn-icons-png.flaticon.com/512/107/107122.png" alt="Search">
+            <input type="text" placeholder="Search for products, brands and more">
+        </div>
+        <div class="action flex">
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/128/126/126486.png" alt="profile">
+                <p>Profile</p>
+            </div>
+            <div>
+                <a href="wishlist.html">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="wishlist">
+                </a>
+                <p>Wishlist</p>
+            </div>
+            <div>
+                <a href="cart.html">
+                    <img src="https://cdn-icons-png.flaticon.com/128/126/126515.png" alt="bag"> <sup id="bag-count">2</sup>
+                </a>
+                <p>Bag</p>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Header -->
+
+<!-- Main -->
+<section>
+    <div class="img-grid">
+
+    </div>
+    <div class="details">
+        <div class="head">
+            <h1 id="brandName">Allen Solly</h1>
+            <p id="prodName">Men Navy Blue Solid Sporty Jacket</p>
+        </div>
+        <div class="mid">
+            <strong id="prodPrice">Rs.2754</strong>
+            <s id="strikedPrice">Rs.3499</s>
+            <p id="disc">(21% OFF)</p>
+        </div>
+        <span class="tax">inclusive of all taxes</span>
+        <div class="low">
+            <div class="size">
+                <h4>Select Size</h4>
+                <p>Size Chart ></p>
+                <div id="clear">CLEAR ALL</div>
+            </div>
+            <div class="sizes">
+                <div>S</div>
+                <div>M</div>
+                <div>L</div>
+                <div>XL</div>
+                <div>XXL</div>
+            </div>
+        </div>
+        <div class="btn">
+            <button id="bag"><i class="fa-solid fa-bag-shopping"></i>Add to Bag</button>
+            <button id="wishlist"><i class="fa-solid fa-heart"></i>Wishlist</button>
+        </div>
+        <div class="seller">
+            <p>Product code:<span id="code"></span></p>
+            <p>Seller:<span id="seller"></span></p>
+        </div>
+    </div>
+</section>
+<!-- Main -->
+</body>
+</html>
+
+<script src="./Script/viewData.js"></script>
+<script src="./Script/mensData.js"></script>

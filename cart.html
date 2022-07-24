@@ -1,0 +1,298 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <script src="https://kit.fontawesome.com/4cf7896eb5.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins",sans-serif;
+        }
+
+        #container{
+            margin: auto;
+            padding-top: 80px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-box{
+            width: 60%;
+            padding: 30px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+            border-radius: 15px;
+        }
+
+        .box{
+            display: grid;
+            grid-template-columns: repeat(5,auto);
+            align-items: center;
+            gap: 0 10px;
+        }
+
+        .box > .add,.sub,.del{
+            float: right;
+            width: 30px;
+            height: 30px;
+            background-color: #0C56D0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .text-box p:first-child{
+            font-weight: 600;
+        }
+
+        .text-box p:nth-child(2){
+            padding: 1.2rem 0;
+        }
+
+        img{
+            width: 170px;
+        }
+
+        .right-box{
+            width: 30%;
+            padding: 30px;
+            height: 450px;
+            display: flex;
+            border-radius: 15px;
+            flex-direction: column;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(56, 38, 38, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        }
+
+        .total > div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .right-box hr{
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        button{
+            background-color: #0C56D0;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            padding: 16px 16px;
+            margin-bottom: 2rem;
+        }
+
+        .payments{
+            display: flex;
+            justify-content: center;
+        }
+
+        .payments > img{
+            width: 60px;
+            margin: 0 10px;
+        }
+
+        .promo{
+            margin-top: 60px;
+        }
+
+        input{
+            padding: 8px 12px;
+            font-weight: 600;
+        }
+
+        nav{
+            height: 80px;
+        }
+
+    </style>
+</head>
+<header>
+    <nav class="flex">
+        <div class="left flex">
+            <a href="index.html">
+                <img src="https://logosarchive.com/wp-content/uploads/2021/12/Myntra-icon-logo.svg" alt="logo">
+            </a>
+        </div>
+        
+    </nav>
+</header>
+<body>
+    <a href="mens.html">Go back </a>
+    <section id="container">
+        <div class="left-box">
+
+        </div>
+        <div class="right-box">
+            <div>
+                <p>Billings</p>
+                <hr>
+            </div>
+            <div class="total">
+                <div>
+                    <p>Total</p>
+                    <p id="total">0.00</p>
+                </div>
+                <div style="margin: 10px 0;">
+                    <p>Discount</p>
+                    <p id="discount">0.00</p>
+                </div>
+                <hr>
+                <div class="total-final">
+                    <p style="width: 60%; line-height: 2rem; font-weight: 600;">Total amount (including VAT)</p>
+                    <p id="grand-total" style="font-weight: 700; font-size: 18px;">0.00</p>
+                </div>
+                <hr>
+            </div>
+            <button onclick="goPayments()">GO TO CHECKOUT</button>
+            <div>
+                <div class="payments">
+                    <img src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg" alt="">
+                    <img src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg" alt="">
+                    <img src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg" alt="">
+                    <img src="https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png" alt="">
+                </div>
+            </div>
+            <div class="promo">
+                <form action="">
+                    <input type="text" id="promo" placeholder="Enter Promo Code">
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<script type="application/javascript">
+    let bagArr = JSON.parse(localStorage.getItem("bag")) || [];
+    let container = document.querySelector(".left-box");
+    let total = document.querySelector("#total");
+    let grandTotal = document.querySelector("#grand-total");
+
+    cartTotal(bagArr);
+    displayCart(bagArr);
+    
+    total.innerText ="Rs."+cartTotal(bagArr);
+    grandTotal.innerText="Rs."+cartTotal(bagArr);
+
+    function displayCart(bagArr){
+        bagArr.map((elem,index,arr)=>{
+        let box = document.createElement("div");
+        let textBox = document.createElement("div");
+        let img = document.createElement("img");
+        let hr = document.createElement("hr");
+        let size = document.createElement("p");
+        let add = document.createElement("button");
+        let sub = document.createElement("button");
+        let del = document.createElement("button");
+        let i = document.createElement("i");
+        let ruppee = document.createElement("span");
+
+        img.setAttribute("src",elem.images[0]);
+        let name = document.createElement("p");
+        name.innerText=elem.name;
+        let price = document.createElement("p");
+        price.innerText="Rs."+elem.price;
+        let qty = document.createElement("p");
+        qty.innerText="Qty : "+elem.Qty;
+        size.innerText="Size:"+elem.size;
+
+        add.innerText="+";
+        add.setAttribute("class","add");
+        sub.innerText="-";
+        sub.setAttribute("class","sub");
+
+        textBox.setAttribute("class","text-box");
+        box.setAttribute("class","box");
+        i.setAttribute("class","fa-solid fa-trash-can");
+        del.setAttribute("class","del");
+
+        textBox.append(name,price,qty,size);
+        del.append(i);
+        box.append(img,textBox,add,sub,del);
+        container.append(box,hr);
+
+        
+
+        add.addEventListener("click",()=>{
+            elem.Qty++;
+            qty.innerText="Qty : "+elem.Qty;
+            localStorage.setItem("bag",JSON.stringify(bagArr));
+            total.innerText ="Rs."+cartTotal(bagArr);
+            grandTotal.innerText="Rs."+cartTotal(bagArr);
+        });
+
+        sub.addEventListener("click",()=>{
+            elem.Qty--;
+            if(elem.Qty==0){
+                deleteRow(index);
+            }
+            qty.innerText="Qty : "+elem.Qty;
+            localStorage.setItem("bag",JSON.stringify(bagArr));
+            total.innerText ="Rs."+cartTotal(bagArr);
+            grandTotal.innerText="Rs."+cartTotal(bagArr);
+        });
+
+        del.addEventListener("click",() =>{
+            deleteRow(index);
+            displayCart(bagArr);
+        });
+    });
+    }
+
+    function deleteRow(index){
+        bagArr.splice(index,1);
+        localStorage.setItem("bag",JSON.stringify(bagArr));
+        window.location.reload();
+    }
+
+    function cartTotal(bagArr){
+        let sum = bagArr.reduce((sum,elem) => {
+            sum+=elem.price * elem.Qty;
+            return sum;
+        },0);
+        return sum;
+    }
+
+    let form = document.querySelector("form");
+    form.addEventListener("submit",applyPromo);
+    function applyPromo(){
+        event.preventDefault();
+        let promoCode = document.querySelector("#promo").value;
+        let discount = document.querySelector("#discount");
+        if(promo.value === "masai30" && bagArr.length > 0){
+            let total = cartTotal(bagArr);
+            let disc = 30*(total/100);
+
+            grandTotal.innerText="Rs."+(total-disc).toFixed(2);
+            discount.innerText=-disc.toFixed(2);
+
+            alert("Promo code applied");
+            localStorage.setItem("bag",JSON.stringify(bagArr));
+            document.querySelector("#promo").value="";
+        }
+        else{
+            alert("Invalid promo code.");
+            document.querySelector("#promo").value="";
+        }
+    }
+
+    function goPayments(){
+        if(bagArr.length > 0){
+            window.location.href="payments.html";
+        }
+    }
+</script>

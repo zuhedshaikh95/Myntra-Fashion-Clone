@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/navbar.css">
+    <title>Payment Gateway</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        input{
+            display: block;
+        }
+
+        .card{
+            margin: auto;
+            width: 30%;
+            margin-top: 4rem;
+            border-radius: 35px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .top{
+            display: flex;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        .flex{
+            display: flex;
+            flex-direction: column;
+        }
+
+        form{
+            padding: 0px 30px 30px 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fd-row{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        label{
+            font-weight: 600;
+            color: gray;
+            padding-left: 5px;
+            text-transform: uppercase;
+        }
+
+        input{
+            padding: 10px 12px;
+            border-radius: 8px;
+	        border: 2px solid #ced4da;
+            font-weight: 600;
+            font-size: 14px;
+            margin: 0 5px;
+            margin-bottom: 1rem;
+            outline: none;
+        }
+
+        button{
+            background-color: white;
+            border: none;
+            color: gray;
+            font-weight: 600;
+        }
+
+        input[type="submit"]{
+            background-color: #0C56D0;
+            border: none;
+            color: white;
+            padding: 16px 20px;
+        }
+
+        img{
+            position: relative;
+            width: 50px;
+            top: 55px;
+            left: 310px;
+        }
+
+        input[type="number"]{
+            width: 160px;
+        }
+
+        @media all and (min-width:480px) and (max-width:1024px){
+            .card{
+                width: 90%;
+            }
+
+            img{
+            left: 520px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="top">
+            <h3>Total Amount</h3>
+        </div>
+        <img>
+        <form action="" id="form">
+            <label for="card-number">Card Number</label>
+            <input type="tel" id="card-number" placeholder="Card number" maxlength="16">
+            <div class="fd-row">
+                <div class="flex">
+                    <label for="date">Expiry</label>
+                    <input size="10" type="date" placeholder="mm/dd/yy" id="date">
+                </div>
+                <div class="flex">
+                    <label for="cvv">Cvv</label>
+                    <input size="10" type="tel" id="cvv" maxlength="3">
+                </div>
+            </div>
+            <div class="fd-row">
+                <button onclick="goback()">Cancel</button>
+                <input type="submit" value="Make Payment">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",makePayment);
+    function makePayment(){
+        event.preventDefault();
+        let cardNumber = document.querySelector("#card-number").value; 
+        let date = document.querySelector("#date");
+        let cvv = document.querySelector("#cvv").value;
+        let dateArr=[];
+
+        if(cardNumber.length == 15 || cardNumber.length == 16 && cvv.length == 3 && date!==""){
+            alert("Payment Succesful");
+            window.location.href="getOTP.html";
+        }
+        else if(cardNumber.length !== 16){
+            alert("Invalid Card");
+        }
+        else if(cardNumber=="" || cvv=="" || date==""){
+            alert("Fill all ipnut fields");
+        }
+    }
+    function goback(){
+        window.location.href="cart.html";
+    }
+
+    document.querySelector("form").addEventListener("change",addImage)
+    function addImage(){
+        let cardNumber = document.querySelector("#card-number").value;
+        let img = document.querySelector('img');
+        if(cardNumber[0]==4){
+            img.setAttribute("src","https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg")
+        }
+        else if(cardNumber[0]==5){
+            img.setAttribute("src","https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg");
+        }
+        else if(cardNumber[0]==3 && cardNumber.length==15){
+            img.setAttribute("src","https://mdbcdn.b-cdn.net/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg");
+        }
+    }
+</script>
